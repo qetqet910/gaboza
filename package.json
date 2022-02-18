@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "gaboza",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {
+    "express": "^4.17.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qetqet910/gaboza.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qetqet910/gaboza/issues"
+  },
+  "homepage": "https://github.com/qetqet910/gaboza#readme",
+  "description": ""
+}
