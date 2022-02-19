@@ -33,7 +33,7 @@ html body .screen header {
   height: 8vh;
   -webkit-box-shadow: 0px -4px 20px #222222;
           box-shadow: 0px -4px 20px #222222;
-  padding: 0px 60px;
+  padding: 0px 75px;
 }
 
 html body .screen header .logo span i {
@@ -93,8 +93,29 @@ html body .screen header #bannerA {
   top: 6vh;
   width: 150px;
   height: 150px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+}
+
+html body .screen header #bannerA::after {
+  content: '';
+  position: absolute;
+  bottom: -1%;
+  left: 0px;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(135deg, transparent 50%, #111111 50%);
+  background-size: 10px;
+}
+
+html body .screen header #bannerA::before {
+  content: '';
+  position: absolute;
+  bottom: -1%;
+  left: 0px;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(45deg, transparent 50%, red 50%);
+  background-size: 10px;
+  z-index: 999;
 }
 
 html body .screen header #bannerA .banner {
