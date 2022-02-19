@@ -1,12 +1,11 @@
 {
-  "scripts": {
-    "start": "node server.js"
-  },
   "name": "gaboza",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
-  "devDependencies": {
-    "express": "^4.17.3"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +18,7 @@
     "url": "https://github.com/qetqet910/gaboza/issues"
   },
   "homepage": "https://github.com/qetqet910/gaboza#readme",
-  "description": ""
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
