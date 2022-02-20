@@ -1,0 +1,194 @@
+$MainColor: #eaeef0;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: $MainColor;
+
+        .card {
+            position: relative;
+            width: 350px;
+            height: 250px;
+            border-radius: 20px;
+            border: 1px solid white;
+            box-shadow: -10px -10px 15px #ffffff90, 8px 8px 25px #00000050;
+            background-color: $MainColor;
+            overflow: hidden;
+
+            .fa-motorcycle {
+                position: absolute;
+                display: block;
+                left: 40px;
+                bottom: 30px;
+                font-size: 4rem;
+                color: white;
+                -webkit-text-stroke: 1.6px black;
+                animation: 위아래위위아래 .3s infinite linear;
+                z-index: 10;
+
+                @keyframes 위아래위위아래 {
+                    0% {
+                        transform: translateY(0px);
+                    }
+
+                    50% {
+                        transform: translateY(-1px);
+                    }
+
+                    100% {
+                        transform: translateY(0px);
+                    }
+                }
+            }
+
+            .solar {
+                position: absolute;
+                display: block;
+                right: 40px;
+                top: 40px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                box-shadow: 0px 0px 15px #fbed31,
+                    0px 0px 20px #fbed31,
+                    0px 0px 50px #fbed31,
+                    0px 0px 70px #fbed31,
+                    0px 0px 90px #fbed31;
+                background-color: white;
+            }
+
+            .Ekd {
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                width: 100%;
+                height: 60px;
+
+                .moun {
+                    position: absolute;
+                    width: 100%;
+                    left: 0px;
+                    bottom: 88%;
+
+                    .fa-mountain {
+                        font-size: 10rem;
+                        color: transparent;
+                        background: linear-gradient(to bottom, #192a56, #2f3640);
+                        -webkit-background-clip: text;
+                        animation: tree 6s infinite linear;
+                        animation-delay: calc(var(--i) * -1.2s);
+                        transform: translateX(350px);
+
+                        @keyframes tree {
+                            0% {
+                                transform: translateX(350px);
+                            }
+
+                            100% {
+                                transform: translateX(-350px);
+                            }
+                        }
+                    }
+                }
+
+                .trees {
+                    position: absolute;
+                    left: 0px;
+                    bottom: 96%;
+
+                    .fa-tree {
+                        font-size: 4rem;
+                        color: transparent;
+                        background: linear-gradient(to bottom, #4cd137, green);
+                        -webkit-background-clip: text;
+                        animation: tree 6s infinite linear;
+                        animation-delay: calc(var(--i) * -1.2s);
+                        transform: translateX(350px);
+
+                        @keyframes tree {
+                            0% {
+                                transform: translateX(350px);
+                            }
+
+                            100% {
+                                transform: translateX(-350px);
+                            }
+                        }
+                    }
+                }
+
+                .wksel {
+                    width: 100%;
+                    height: 16%;
+                    background-color: green;
+                    z-index: 10;
+                }
+
+                .ehfh {
+                    width: 100%;
+                    height: 84%;
+                    background-color: #2f3640;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0px;
+                        top: 50%;
+                        width: 100%;
+                        height: 2px;
+                        background: repeating-linear-gradient(to left, transparent, transparent 50%, #fff 50%, #fff 100%);
+                        background-size: 16px;
+                        transform: translateY(-50%);
+                        animation: ehfh .135s infinite linear;
+
+                        @keyframes ehfh {
+                            0% {
+                                background-position-x: 0px;
+                            }
+
+                            100% {
+                                background-position-x: -16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .cloud {
+                .fa-cloud {
+                    font-size: 4rem;
+                    color: white;
+                    -webkit-text-stroke: 2px black;
+                    animation: cloud 6s infinite linear;
+                    animation-delay: calc(var(--i) * -1.2s);
+                    transform: translateX(350px);
+
+                    @keyframes cloud {
+                        0% {
+                            transform: translateX(350px) translateY(calc(var(--i) * 12px));
+                        }
+
+                        100% {
+                            transform: translateX(-350px) translateY(calc(var(--i) * 12px));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

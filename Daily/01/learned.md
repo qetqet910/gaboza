@@ -11,7 +11,7 @@
 <br><br>
 
 ```css
-    -webkit-text-stroke
+    -webkit-text-stroke: .3px rgba(255, 255, 255, .5);
 ```
 
 - webkit 속성으로 글자의 border를 정함
