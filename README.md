@@ -14,4 +14,3 @@
 > Javascript 미니 프로젝트 하나씩 진행하기 <br>
 > 프로젝트 사이트 [링크](https://devdojo.com/suhailkakar/10-projects-you-can-do-to-become-a-frontend-master) [링크](https://www.freecodecamp.org/news/javascript-projects-for-beginners/#how-to-create-a-color-flipper) <br>
 > Online Tutorials 진행하기 [링크](https://affectionate-lichterman-efd913.netlify.app/)<br> 
-> 시간 남으면 프로그래머스 알고리즘 강의
