@@ -2,14 +2,14 @@
 
 <br>
 
-> Online Tutorials Header Nav bar [Link](https://dazzling-perlman-0414ab.netlify.app/) V <br>
+> Online Tutorials Header Nav bar [Link](https://dazzling-perlman-0414ab.netlify.app/) ONLY CSS V <br>
 > 내일 계획 짜기 V
 
 <br>
 
 # 02 
 
-> Online Tutorials 진행하기 [링크](https://affectionate-lichterman-efd913.netlify.app/)&nbsp;[링크](https://priceless-goldstine-17765b.netlify.app/)<br> 
+> Online Tutorials 진행하기 [링크](https://affectionate-lichterman-efd913.netlify.app/)&nbsp;[링크](https://priceless-goldstine-17765b.netlify.app/) ONLY CSS V <br> 
 > Inflearn 인터렉티브 강의 <br>
 > React 강의 <br>
 > Javascript 미니 프로젝트 하나씩 진행하기 <br>

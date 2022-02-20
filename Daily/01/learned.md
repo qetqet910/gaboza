@@ -16,3 +16,7 @@
 
 - webkit 속성으로 글자의 border를 정함
 - 호환성 화이팅
+
+## etc
+
+- linaer-gradient를 이용한 입체감 표현
