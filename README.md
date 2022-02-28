@@ -26,3 +26,4 @@
  <br>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/064ff70a-7dea-4e3d-b941-b34234574ecd/deploy-status)](https://tender-shaw-99bc45.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b19b6f3a-3c45-4690-a71b-9f6d741ebfe3/deploy-status)](https://youthful-elion-414e14.netlify.app/)
