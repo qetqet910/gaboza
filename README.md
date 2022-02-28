@@ -25,3 +25,4 @@
 
  <br>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/064ff70a-7dea-4e3d-b941-b34234574ecd/deploy-status)](https://tender-shaw-99bc45.netlify.app/)
