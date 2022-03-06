@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/qetqet910/gaboza#readme",
   "dependencies": {
+    "create-react-app": "^5.0.0",
     "express": "^4.17.3"
   }
 }

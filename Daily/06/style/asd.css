@@ -1,0 +1,43 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+html body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #222;
+}
+
+html body .Fire span {
+  display: block;
+  font-size: 18rem;
+  font-weight: bold;
+  color: #ffeb3b;
+  text-shadow: 0px 0px 20px #ff8c3b, 0px 0px 40px #ff8c3b, 0px 0px 60px #ff8c3b, 0px 0px 80px #ff8c3b, 0px 0px 100px #ff8c3b, 0px 0px 120px #ff8c3b, 0px 0px 140px #ff8c3b, 0px 0px 160px #ff8c3b;
+  -webkit-filter: url(#fire);
+          filter: url(#fire);
+  margin-top: 80px;
+}
+/*# sourceMappingURL=asd.css.map */
