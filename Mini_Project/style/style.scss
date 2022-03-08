@@ -1,0 +1,288 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+        background-color: #222;
+
+        .fff {
+            position: absolute;
+            top: 3%;
+            font-family: 'Dancing Script', cursive;
+            font-weight: bold;
+            font-size: 1.6rem;
+            color: white;
+        }
+
+        .CardProfile {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 0px;
+            top: 50%;
+            width: 100%;
+            height: 50%;
+            cursor: grab;
+
+            // .overdiv {
+            //     position: absolute;
+            //     top: -200%;
+            //     left: 50%;
+            //     width: 220px;
+            //     height: 160px;
+            //     transform: translate(-50%, -50%) rotate(90deg);
+            //     background-color: red;
+            // }
+
+            .CardPocket {
+                position: absolute;
+                left: 50%;
+                bottom: -90%;
+                transform: translate(-50%, -50%);
+
+                li {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    left: 50%;
+                    top: 50%;
+                    display: block;
+                    width: 220px;
+                    height: 160px;
+                    background-color: white;
+                    transform-origin: 0px 0px;
+                    transition: all .4s;
+                    opacity: 1;
+                    filter: blur(0px);
+                    transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+
+                    div {
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        width: 70%;
+                        height: 100%;
+                        transform: rotate(90deg);
+                        color: white;
+
+                        p {
+                            position: absolute;
+                            display: block;
+                            transform: scale(.4);
+                        }
+
+                        h1 {
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    .top {
+                        left: 28%;
+
+                        h1 {
+                            font-size: 2.3rem;
+                            font-weight: bold;
+                            font-family: 'Roboto Mono', monospace;
+                            margin-top: 32px;
+                            margin-left: 8px;
+                            width: 140px;
+                        }
+
+                        p {
+                            right: -18%;
+                            bottom: 78%;
+                        }
+                    }
+
+                    .bottom {
+                        h1 {
+                            position: absolute;
+                            left: 2%;
+                            bottom: 6%;
+                            font-size: 2.2rem;
+                            font-weight: bold;
+                            font-family: 'Atma', cursive;
+                        }
+
+                        p {
+                            right: -46px;
+                            bottom: -32px;
+                            text-align: right;
+                        }
+                    }
+
+                    // span {
+                    //     font-family: 'Slabo 27px', serif;
+                    // }
+
+
+                    &:nth-child(even) {
+                        animation: identifierE 2s ease-in-out;
+                        animation-iteration-count: 1;
+                    }
+
+                    &:nth-child(odd) {
+                        animation: identifierO 2s ease-in-out;
+                        animation-iteration-count: 1;
+                    }
+
+                    @keyframes identifierE {
+                        0% {
+                            opacity: 0;
+                            filter: blur(120px);
+                            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(30px + 10vw + 20vh));
+                        }
+
+                        100% {
+                            opacity: 1;
+                            filter: blur(0px);
+                            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+                        }
+                    }
+
+                    @keyframes identifierO {
+                        0% {
+                            opacity: 0;
+                            filter: blur(120px);
+                            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(500px + 10vw + 20vh));
+                        }
+
+                        100% {
+                            opacity: 1;
+                            filter: blur(0px);
+                            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+                        }
+                    }
+
+                    &:hover {
+                        transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(320px + 10vw + 20vh)) scale(1.05);
+                        z-index: 999;
+                    }
+
+                    &:nth-child(1) {
+                        background-color: #d63031;
+                    }
+
+                    &:nth-child(2) {
+                        background-color: #ff7675;
+                    }
+
+                    &:nth-child(3) {
+                        background-color: #e17055;
+                    }
+
+                    &:nth-child(4) {
+                        background-color: #fab1a0;
+                    }
+
+                    &:nth-child(5) {
+                        background-color: #fdcb6e;
+                    }
+
+                    &:nth-child(6) {
+                        background-color: #ffeaa7;
+                    }
+
+                    &:nth-child(7) {
+                        background-color: #00b894;
+                    }
+
+                    &:nth-child(8) {
+                        background-color: #55efc4;
+                    }
+
+                    &:nth-child(9) {
+                        background-color: #00cec9;
+                    }
+
+                    &:nth-child(10) {
+                        background-color: #81ecec;
+                    }
+
+                    &:nth-child(11) {
+                        background-color: #74b9ff;
+                    }
+
+                    &:nth-child(12) {
+                        background-color: #0984e3;
+                    }
+
+                    &:nth-child(13) {
+                        background-color: #a29bfe;
+                    }
+
+                    &:nth-child(14) {
+                        background-color: #6c5ce7;
+                    }
+
+                    &:nth-child(15) {
+                        background-color: #dfe6e9;
+                    }
+
+                    &:nth-child(16) {
+                        background-color: #b2bec3;
+                    }
+
+                    &:nth-child(17) {
+                        background-color: #636e72;
+                    }
+
+                    &:nth-child(18) {
+                        background-color: #2d3436;
+                    }
+
+                    &:nth-child(19) {
+                        background-color: #fd79a8;
+                    }
+
+                    &:nth-child(20) {
+                        background-color: #e84393;
+                    }
+
+                    &:nth-child(21) {
+                        background-color: #b33939;
+                    }
+
+                    &:nth-child(22) {
+                        background-color: #84817a;
+                    }
+
+                    &:nth-child(23) {
+                        background-color: #d1ccc0;
+                    }
+
+                    &:nth-child(24) {
+                        background-color: #aaa69d;
+                    }
+
+                    &:nth-child(25) {
+                        background-color: #f7f1e3;
+                    }
+
+                    // &:nth-child(26) {
+                    //     background-color: #474787;
+                    // }
+
+                    // &:nth-child(27) {
+                    //     background-color: #2c2c54;
+                    // }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,336 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+html body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #222;
+}
+
+html body .fff {
+  position: absolute;
+  top: 3%;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: white;
+}
+
+html body .CardProfile {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0px;
+  top: 50%;
+  width: 100%;
+  height: 50%;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+html body .CardProfile .CardPocket {
+  position: absolute;
+  left: 50%;
+  bottom: -90%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+html body .CardProfile .CardPocket li {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 220px;
+  height: 160px;
+  background-color: white;
+  -webkit-transform-origin: 0px 0px;
+          transform-origin: 0px 0px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  opacity: 1;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+          transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+}
+
+html body .CardProfile .CardPocket li div {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 70%;
+  height: 100%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  color: white;
+}
+
+html body .CardProfile .CardPocket li div p {
+  position: absolute;
+  display: block;
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+}
+
+html body .CardProfile .CardPocket li div h1 {
+  font-size: 1.2rem;
+}
+
+html body .CardProfile .CardPocket li .top {
+  left: 28%;
+}
+
+html body .CardProfile .CardPocket li .top h1 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  font-family: 'Roboto Mono', monospace;
+  margin-top: 32px;
+  margin-left: 8px;
+  width: 140px;
+}
+
+html body .CardProfile .CardPocket li .top p {
+  right: -18%;
+  bottom: 78%;
+}
+
+html body .CardProfile .CardPocket li .bottom h1 {
+  position: absolute;
+  left: 2%;
+  bottom: 6%;
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: 'Atma', cursive;
+}
+
+html body .CardProfile .CardPocket li .bottom p {
+  right: -46px;
+  bottom: -32px;
+  text-align: right;
+}
+
+html body .CardProfile .CardPocket li:nth-child(even) {
+  -webkit-animation: identifierE 2s ease-in-out;
+          animation: identifierE 2s ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+html body .CardProfile .CardPocket li:nth-child(odd) {
+  -webkit-animation: identifierO 2s ease-in-out;
+          animation: identifierO 2s ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes identifierE {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(120px);
+            filter: blur(120px);
+    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(30px + 10vw + 20vh));
+            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(30px + 10vw + 20vh));
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+  }
+}
+
+@keyframes identifierE {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(120px);
+            filter: blur(120px);
+    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(30px + 10vw + 20vh));
+            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(30px + 10vw + 20vh));
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+  }
+}
+
+@-webkit-keyframes identifierO {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(120px);
+            filter: blur(120px);
+    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(500px + 10vw + 20vh));
+            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(500px + 10vw + 20vh));
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+  }
+}
+
+@keyframes identifierO {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(120px);
+            filter: blur(120px);
+    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(500px + 10vw + 20vh));
+            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(500px + 10vw + 20vh));
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
+  }
+}
+
+html body .CardProfile .CardPocket li:hover {
+  -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(320px + 10vw + 20vh)) scale(1.05);
+          transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(320px + 10vw + 20vh)) scale(1.05);
+  z-index: 999;
+}
+
+html body .CardProfile .CardPocket li:nth-child(1) {
+  background-color: #d63031;
+}
+
+html body .CardProfile .CardPocket li:nth-child(2) {
+  background-color: #ff7675;
+}
+
+html body .CardProfile .CardPocket li:nth-child(3) {
+  background-color: #e17055;
+}
+
+html body .CardProfile .CardPocket li:nth-child(4) {
+  background-color: #fab1a0;
+}
+
+html body .CardProfile .CardPocket li:nth-child(5) {
+  background-color: #fdcb6e;
+}
+
+html body .CardProfile .CardPocket li:nth-child(6) {
+  background-color: #ffeaa7;
+}
+
+html body .CardProfile .CardPocket li:nth-child(7) {
+  background-color: #00b894;
+}
+
+html body .CardProfile .CardPocket li:nth-child(8) {
+  background-color: #55efc4;
+}
+
+html body .CardProfile .CardPocket li:nth-child(9) {
+  background-color: #00cec9;
+}
+
+html body .CardProfile .CardPocket li:nth-child(10) {
+  background-color: #81ecec;
+}
+
+html body .CardProfile .CardPocket li:nth-child(11) {
+  background-color: #74b9ff;
+}
+
+html body .CardProfile .CardPocket li:nth-child(12) {
+  background-color: #0984e3;
+}
+
+html body .CardProfile .CardPocket li:nth-child(13) {
+  background-color: #a29bfe;
+}
+
+html body .CardProfile .CardPocket li:nth-child(14) {
+  background-color: #6c5ce7;
+}
+
+html body .CardProfile .CardPocket li:nth-child(15) {
+  background-color: #dfe6e9;
+}
+
+html body .CardProfile .CardPocket li:nth-child(16) {
+  background-color: #b2bec3;
+}
+
+html body .CardProfile .CardPocket li:nth-child(17) {
+  background-color: #636e72;
+}
+
+html body .CardProfile .CardPocket li:nth-child(18) {
+  background-color: #2d3436;
+}
+
+html body .CardProfile .CardPocket li:nth-child(19) {
+  background-color: #fd79a8;
+}
+
+html body .CardProfile .CardPocket li:nth-child(20) {
+  background-color: #e84393;
+}
+
+html body .CardProfile .CardPocket li:nth-child(21) {
+  background-color: #b33939;
+}
+
+html body .CardProfile .CardPocket li:nth-child(22) {
+  background-color: #84817a;
+}
+
+html body .CardProfile .CardPocket li:nth-child(23) {
+  background-color: #d1ccc0;
+}
+
+html body .CardProfile .CardPocket li:nth-child(24) {
+  background-color: #aaa69d;
+}
+
+html body .CardProfile .CardPocket li:nth-child(25) {
+  background-color: #f7f1e3;
+}
+/*# sourceMappingURL=style.css.map */
