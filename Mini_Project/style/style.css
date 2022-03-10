@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -22,6 +23,7 @@ html body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   min-height: 100vh;
   overflow: hidden;
   background-color: #222;
@@ -34,6 +36,97 @@ html body .fff {
   font-weight: bold;
   font-size: 1.6rem;
   color: white;
+}
+
+html body .LeftWindow {
+  position: absolute;
+  left: -100%;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+html body .LeftWindow .close {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 6%;
+  top: calc(50% - 15px);
+  color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid black;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transition-delay: .8s;
+          transition-delay: .8s;
+  -webkit-animation: closebtn 3s infinite ease-in-out;
+          animation: closebtn 3s infinite ease-in-out;
+}
+
+@-webkit-keyframes closebtn {
+  0% {
+    -webkit-box-shadow: 0px 0px 2px black;
+            box-shadow: 0px 0px 2px black;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 8px black;
+            box-shadow: 0px 0px 8px black;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 2px black;
+            box-shadow: 0px 0px 2px black;
+  }
+}
+
+@keyframes closebtn {
+  0% {
+    -webkit-box-shadow: 0px 0px 2px black;
+            box-shadow: 0px 0px 2px black;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 8px black;
+            box-shadow: 0px 0px 8px black;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 2px black;
+            box-shadow: 0px 0px 2px black;
+  }
+}
+
+html body .LeftWindow .close::after, html body .LeftWindow .close::before {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background-color: black;
+  left: 50%;
+  top: 50%;
+}
+
+html body .LeftWindow .close::after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+html body .LeftWindow .close::before {
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
 }
 
 html body .CardProfile {
@@ -55,12 +148,79 @@ html body .CardProfile {
   cursor: grab;
 }
 
+html body .CardProfile i {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  -webkit-animation: Dragasd 1.8s ease-in-out;
+          animation: Dragasd 1.8s ease-in-out;
+  font-weight: bold;
+}
+
+html body .CardProfile i:nth-child(1) {
+  left: 40%;
+  top: 80%;
+  -webkit-transform: translate(-50%, -50%) rotateY(180deg) rotateZ(40deg);
+          transform: translate(-50%, -50%) rotateY(180deg) rotateZ(40deg);
+}
+
+html body .CardProfile i:nth-child(2) {
+  right: 39.2%;
+  top: 80%;
+  -webkit-transform: translate(-50%, -50%) rotateZ(40deg);
+          transform: translate(-50%, -50%) rotateZ(40deg);
+}
+
+html body .CardProfile::after {
+  content: '여기를 드래그 해주세요';
+  position: absolute;
+  left: 50%;
+  top: 66%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.8rem;
+  -webkit-transition: all 1.8s;
+  transition: all 1.8s;
+  -webkit-animation: Dragasd 1.8s ease-in-out;
+          animation: Dragasd 1.8s ease-in-out;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+}
+
+@-webkit-keyframes Dragasd {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+@keyframes Dragasd {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
 html body .CardProfile .CardPocket {
   position: absolute;
   left: 50%;
-  bottom: -90%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  bottom: -80%;
+  -webkit-transform: translate(-50%, -50%) rotate(-100deg);
+          transform: translate(-50%, -50%) rotate(-100deg);
+  background-color: red;
 }
 
 html body .CardProfile .CardPocket li {
@@ -85,6 +245,7 @@ html body .CardProfile .CardPocket li {
   -webkit-transition: all .4s;
   transition: all .4s;
   opacity: 1;
+  color: red;
   -webkit-filter: blur(0px);
           filter: blur(0px);
   -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(300px + 10vw + 20vh));
@@ -100,6 +261,7 @@ html body .CardProfile .CardPocket li div {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   color: white;
+  pointer-events: none;
 }
 
 html body .CardProfile .CardPocket li div p {
@@ -147,15 +309,15 @@ html body .CardProfile .CardPocket li .bottom p {
 }
 
 html body .CardProfile .CardPocket li:nth-child(even) {
-  -webkit-animation: identifierE 2s ease-in-out;
-          animation: identifierE 2s ease-in-out;
+  -webkit-animation: identifierE 1.8s ease-in-out;
+          animation: identifierE 1.8s ease-in-out;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
 
 html body .CardProfile .CardPocket li:nth-child(odd) {
-  -webkit-animation: identifierO 2s ease-in-out;
-          animation: identifierO 2s ease-in-out;
+  -webkit-animation: identifierO 1.8s ease-in-out;
+          animation: identifierO 1.8s ease-in-out;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
@@ -163,10 +325,10 @@ html body .CardProfile .CardPocket li:nth-child(odd) {
 @-webkit-keyframes identifierE {
   0% {
     opacity: 0;
-    -webkit-filter: blur(120px);
-            filter: blur(120px);
-    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(30px + 10vw + 20vh));
-            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(30px + 10vw + 20vh));
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(200px + 10vw + 20vh));
+            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(200px + 10vw + 20vh));
   }
   100% {
     opacity: 1;
@@ -180,10 +342,10 @@ html body .CardProfile .CardPocket li:nth-child(odd) {
 @keyframes identifierE {
   0% {
     opacity: 0;
-    -webkit-filter: blur(120px);
-            filter: blur(120px);
-    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(30px + 10vw + 20vh));
-            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(30px + 10vw + 20vh));
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(200px + 10vw + 20vh));
+            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(200px + 10vw + 20vh));
   }
   100% {
     opacity: 1;
@@ -197,10 +359,10 @@ html body .CardProfile .CardPocket li:nth-child(odd) {
 @-webkit-keyframes identifierO {
   0% {
     opacity: 0;
-    -webkit-filter: blur(120px);
-            filter: blur(120px);
-    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(500px + 10vw + 20vh));
-            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(500px + 10vw + 20vh));
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(400px + 10vw + 20vh));
+            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(400px + 10vw + 20vh));
   }
   100% {
     opacity: 1;
@@ -214,10 +376,10 @@ html body .CardProfile .CardPocket li:nth-child(odd) {
 @keyframes identifierO {
   0% {
     opacity: 0;
-    -webkit-filter: blur(120px);
-            filter: blur(120px);
-    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(500px + 10vw + 20vh));
-            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(500px + 10vw + 20vh));
+    -webkit-filter: blur(100px);
+            filter: blur(100px);
+    -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(400px + 10vw + 20vh));
+            transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(400px + 10vw + 20vh));
   }
   100% {
     opacity: 1;
