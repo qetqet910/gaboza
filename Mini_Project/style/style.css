@@ -31,15 +31,26 @@ html body {
 
 html body .fff {
   position: absolute;
-  top: 3%;
+  top: 6%;
   font-family: 'Dancing Script', cursive;
   font-weight: bold;
   font-size: 1.6rem;
   color: white;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 html body .LeftWindow {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   left: -100%;
   top: 0px;
   z-index: 1;
@@ -47,6 +58,18 @@ html body .LeftWindow {
   height: 100%;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+}
+
+html body .LeftWindow iframe {
+  width: 94%;
+  height: 94%;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 8px 10px rgba(50, 50, 50, 0.39);
+          box-shadow: 5px 8px 10px rgba(50, 50, 50, 0.39);
+}
+
+html body .LeftWindow iframe::-webkit-scrollbar {
+  display: none;
 }
 
 html body .LeftWindow .close {
@@ -224,6 +247,7 @@ html body .CardProfile .CardPocket {
 }
 
 html body .CardProfile .CardPocket li {
+  content: attr(data-sex);
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,9 +415,11 @@ html body .CardProfile .CardPocket li:nth-child(odd) {
 }
 
 html body .CardProfile .CardPocket li:hover {
-  -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(320px + 10vw + 20vh)) scale(1.05);
-          transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(320px + 10vw + 20vh)) scale(1.05);
+  -webkit-transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(320px + 10vw + 20vh)) scale(1.125);
+          transform: rotateZ(calc(15deg * var(--i))) translate(-50%, -50%) translateX(calc(320px + 10vw + 20vh)) scale(1.125);
   z-index: 999;
+  -webkit-box-shadow: 0px 0px 8px black;
+          box-shadow: 0px 0px 8px black;
 }
 
 html body .CardProfile .CardPocket li:nth-child(1) {

@@ -1,9 +1,9 @@
 const CardsPro = document.querySelector(".CardProfile");
 const Cards = document.querySelector(".CardPocket");
-// const OverDiv = document.querySelector(".overdiv");
 const Lis = document.querySelectorAll(".CardPocket li");
 const LeftWindow = document.querySelector(".LeftWindow")
 const closeBtn = document.querySelector(".close");
+const fff = document.querySelector('.fff');
 
 let Counts = 0;
 
@@ -11,7 +11,9 @@ Lis.forEach(element => {
     element.addEventListener('click', (e) => {
         if (Counts == 0) {
             CardOn(e)
-            // e.target.style.zIndex = '999';
+            const IFrame = document.createElement('iframe');
+            IFrame.src = window.getComputedStyle(e.currentTarget).content.replace("\"", "").replace("\"", "");
+            LeftWindow.append(IFrame)
         }
     }, false)
 });
@@ -20,6 +22,8 @@ closeBtn.addEventListener('click', (e) => {
     LeftWindow.style.left = "-100%";
     LeftWindow.style.backgroundColor = "rgba(255, 255, 255, 0)";
     closeBtn.style.opacity = '0';
+    const IFrame = document.querySelector(".LeftWindow iframe");
+    IFrame.remove();
 })
 
 function CardOn(e) {
@@ -27,6 +31,7 @@ function CardOn(e) {
     LeftWindow.style.backgroundColor = `${CardsColor}`
     LeftWindow.style.left = "0%";
     closeBtn.style.opacity = '1';
+    fff.style.zIndex = "999";
 }
 
 function dragElement(elmnt) {
