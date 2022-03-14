@@ -25,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,5 +49,6 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.24"
-  }
+  },
+  "homepage": "https://qetqet910.github.io/gaboza/tree/main/Mini_Project/Calc/"
 }
