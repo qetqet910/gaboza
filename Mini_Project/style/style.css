@@ -104,31 +104,31 @@ html body .LeftWindow .close {
 
 @-webkit-keyframes closebtn {
   0% {
-    -webkit-box-shadow: 0px 0px 2px black;
-            box-shadow: 0px 0px 2px black;
+    -webkit-box-shadow: 0px 0px 2px white;
+            box-shadow: 0px 0px 2px white;
   }
   50% {
-    -webkit-box-shadow: 0px 0px 8px black;
-            box-shadow: 0px 0px 8px black;
+    -webkit-box-shadow: 0px 0px 8px white;
+            box-shadow: 0px 0px 8px white;
   }
   100% {
-    -webkit-box-shadow: 0px 0px 2px black;
-            box-shadow: 0px 0px 2px black;
+    -webkit-box-shadow: 0px 0px 2px white;
+            box-shadow: 0px 0px 2px white;
   }
 }
 
 @keyframes closebtn {
   0% {
-    -webkit-box-shadow: 0px 0px 2px black;
-            box-shadow: 0px 0px 2px black;
+    -webkit-box-shadow: 0px 0px 2px white;
+            box-shadow: 0px 0px 2px white;
   }
   50% {
-    -webkit-box-shadow: 0px 0px 8px black;
-            box-shadow: 0px 0px 8px black;
+    -webkit-box-shadow: 0px 0px 8px white;
+            box-shadow: 0px 0px 8px white;
   }
   100% {
-    -webkit-box-shadow: 0px 0px 2px black;
-            box-shadow: 0px 0px 2px black;
+    -webkit-box-shadow: 0px 0px 2px white;
+            box-shadow: 0px 0px 2px white;
   }
 }
 
