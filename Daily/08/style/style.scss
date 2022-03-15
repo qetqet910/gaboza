@@ -1,0 +1,313 @@
+@import '_Color.scss';
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: #ecf0f1;
+
+        .road {
+            position: relative;
+            width: 700px;
+            height: 150px;
+            border-radius: 75px;
+            background-color: $RoadColor;
+            overflow: hidden;
+
+            #TA {
+                cursor: pointer;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 50%;
+                width: 100%;
+                height: 4px;
+                background: linear-gradient(to right, white 0%, white 50%, $RoadColor 50%, $RoadColor 10%);
+                background-size: 50px;
+                transform: translateY(-50%);
+                animation: road .125s infinite linear;
+
+                @keyframes road {
+                    0% {
+                        background-position-x: 0px;
+                    }
+
+                    100% {
+                        background-position-x: -50px;
+                    }
+                }
+            }
+
+            .taxi {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                left: 5%;
+                top: 50%;
+                width: 200px;
+                height: 80px;
+                background-color: $TaxiBody1;
+                transform: translateY(-50%);
+                z-index: 9;
+                border-radius: 10px;
+                box-shadow: -10px 10px rgba(0, 0, 0, .25);
+                transform-origin: right;
+                animation: Taxi1 2s infinite ease-in-out;
+
+                @keyframes Taxi1 {
+                    0% {
+                        transform: translateY(-50%) scale(1.0);
+                    }
+
+                    25% {
+                        transform: translateY(-60%) scale(1.01);
+                    }
+
+                    50% {
+                        transform: translateY(-46%) scale(1.0)
+                    }
+
+                    75% {
+                        transform: translateY(-62%) scale(1.01)
+                    }
+
+                    100% {
+                        transform: translateY(-50%) scale(1.0)
+                    }
+                }
+
+                &:hover {
+                    .body2 {
+                        .sunroof {
+                            .realroof {
+                                div {
+                                    box-shadow: 0px 0px 60px rgb(255, 123, 0);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    left: 55%;
+                    animation: Taxi2 1s infinite ease-in-out;
+                    pointer-events: none;
+
+                    @keyframes Taxi2 {
+                        0% {
+                            transform: translateY(-50%);
+                        }
+
+                        10% {
+                            transform: scale(1.1);
+                        }
+
+                        50% {
+                            transform: translateY(-50%)rotateZ(10deg);
+                        }
+
+                        75% {
+                            transform: translateY(-50%)rotateZ(-6deg);
+                        }
+
+                        100% {
+                            transform: translateY(-50%)rotateZ(0deg)scale(1);
+                        }
+                    }
+                }
+
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 12px;
+                    left: 2px;
+                    width: 5px;
+                    height: 15px;
+                    border-radius: 10px;
+                    box-shadow: 0px 42px $BackLightColor;
+                    background-color: $BackLightColor;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 12px;
+                    right: 2px;
+                    width: 5px;
+                    height: 15px;
+                    border-radius: 10px;
+                    box-shadow: 0px 42px white;
+                    background-color: white;
+                }
+
+                .doubleLight {
+                    position: absolute;
+                    right: 0%;
+                    top: 0%;
+                    width: 100px;
+                    height: 80px;
+                    pointer-events: none;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 13px;
+                        right: -150%;
+                        width: 150px;
+                        height: 12px;
+                        background: linear-gradient(90deg, #fff6, transparent);
+                        transform-origin: left;
+                        transform: perspective(200px) rotateY(-50deg) rotateZ(-2deg);
+                        z-index: 11;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 13px;
+                        right: -150%;
+                        width: 150px;
+                        height: 12px;
+                        background: linear-gradient(90deg, #fff6, transparent);
+                        transform-origin: left;
+                        transform: perspective(200px) rotateY(-50deg) rotateZ(2deg);
+                        z-index: 11;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    inset: 5px 10px;
+                    border-radius: 10px;
+                    background-color: $TaxiBody2;
+                    pointer-events: none;
+
+                    .sunroof {
+                        position: absolute;
+                        inset: 0px 30px;
+                        border-radius: 10px;
+                        background-color: $TaxiTop1;
+                        overflow: hidden;
+
+                        .realroof {
+                            position: absolute;
+                            inset: 6px 25px;
+                            border-radius: 4px;
+                            background-color: $TaxiBody2;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                left: calc(50% - 2px);
+                                top: -200%;
+                                width: 4px;
+                                height: 500%;
+                                background-color: $TaxiBody2;
+                            }
+
+                            i {
+                                position: absolute;
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+
+
+                                &:nth-child(1) {
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        right: -14px;
+                                        top: -58px;
+                                        width: 6px;
+                                        height: 200%;
+                                        background-color: #fdd206;
+                                        transform: rotate(75deg);
+                                    }
+
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        right: -14px;
+                                        bottom: -58px;
+                                        width: 6px;
+                                        height: 200%;
+                                        background-color: #fdd206;
+                                        transform: rotate(-75deg);
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        left: -14px;
+                                        top: -58px;
+                                        width: 6px;
+                                        height: 200%;
+                                        background-color: #fdd206;
+                                        transform: rotate(180deg - 75deg);
+                                    }
+
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        left: -14px;
+                                        bottom: -58px;
+                                        width: 6px;
+                                        height: 200%;
+                                        background-color: #fdd206;
+                                        transform: rotate(-180deg + 75deg);
+                                    }
+                                }
+                            }
+
+                            div {
+                                position: absolute;
+                                left: 14%;
+                                top: 28%;
+                                display: grid;
+                                place-items: center;
+                                text-transform: uppercase;
+                                font-size: 1.6rem;
+                                font-weight: bold;
+                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                                letter-spacing: 1.6px;
+                                background-color: white;
+                                z-index: 10;
+                                padding: 2px 5px 5px 4px;
+                                border: 1px solid gray;
+                                border-radius: 3px;
+                                transform: rotate(90deg) scale(.9);
+                                transition: all .5s;
+                                -webkit-user-select: none;
+                                -khtml-user-select: none;
+                                -moz-user-select: none;
+                                -o-user-select: none;
+                                user-select: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

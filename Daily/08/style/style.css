@@ -1,0 +1,394 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+html body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #ecf0f1;
+}
+
+html body .road {
+  position: relative;
+  width: 700px;
+  height: 150px;
+  border-radius: 75px;
+  background-color: #333;
+  overflow: hidden;
+}
+
+html body .road #TA {
+  cursor: pointer;
+}
+
+html body .road::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  width: 100%;
+  height: 4px;
+  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(50%, white), color-stop(50%, #333), color-stop(10%, #333));
+  background: linear-gradient(to right, white 0%, white 50%, #333 50%, #333 10%);
+  background-size: 50px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-animation: road .125s infinite linear;
+          animation: road .125s infinite linear;
+}
+
+@-webkit-keyframes road {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: -50px;
+  }
+}
+
+@keyframes road {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: -50px;
+  }
+}
+
+html body .road .taxi {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 5%;
+  top: 50%;
+  width: 200px;
+  height: 80px;
+  background-color: #f4b603;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 9;
+  border-radius: 10px;
+  -webkit-box-shadow: -10px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: -10px 10px rgba(0, 0, 0, 0.25);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation: Taxi1 2s infinite ease-in-out;
+          animation: Taxi1 2s infinite ease-in-out;
+}
+
+@-webkit-keyframes Taxi1 {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1);
+            transform: translateY(-50%) scale(1);
+  }
+  25% {
+    -webkit-transform: translateY(-60%) scale(1.01);
+            transform: translateY(-60%) scale(1.01);
+  }
+  50% {
+    -webkit-transform: translateY(-46%) scale(1);
+            transform: translateY(-46%) scale(1);
+  }
+  75% {
+    -webkit-transform: translateY(-62%) scale(1.01);
+            transform: translateY(-62%) scale(1.01);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) scale(1);
+            transform: translateY(-50%) scale(1);
+  }
+}
+
+@keyframes Taxi1 {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1);
+            transform: translateY(-50%) scale(1);
+  }
+  25% {
+    -webkit-transform: translateY(-60%) scale(1.01);
+            transform: translateY(-60%) scale(1.01);
+  }
+  50% {
+    -webkit-transform: translateY(-46%) scale(1);
+            transform: translateY(-46%) scale(1);
+  }
+  75% {
+    -webkit-transform: translateY(-62%) scale(1.01);
+            transform: translateY(-62%) scale(1.01);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) scale(1);
+            transform: translateY(-50%) scale(1);
+  }
+}
+
+html body .road .taxi:hover .body2 .sunroof .realroof div {
+  -webkit-box-shadow: 0px 0px 60px #ff7b00;
+          box-shadow: 0px 0px 60px #ff7b00;
+}
+
+html body .road .taxi:nth-child(2) {
+  left: 55%;
+  -webkit-animation: Taxi2 1s infinite ease-in-out;
+          animation: Taxi2 1s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@-webkit-keyframes Taxi2 {
+  0% {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  10% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: translateY(-50%) rotateZ(10deg);
+            transform: translateY(-50%) rotateZ(10deg);
+  }
+  75% {
+    -webkit-transform: translateY(-50%) rotateZ(-6deg);
+            transform: translateY(-50%) rotateZ(-6deg);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) rotateZ(0deg) scale(1);
+            transform: translateY(-50%) rotateZ(0deg) scale(1);
+  }
+}
+
+@keyframes Taxi2 {
+  0% {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  10% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: translateY(-50%) rotateZ(10deg);
+            transform: translateY(-50%) rotateZ(10deg);
+  }
+  75% {
+    -webkit-transform: translateY(-50%) rotateZ(-6deg);
+            transform: translateY(-50%) rotateZ(-6deg);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) rotateZ(0deg) scale(1);
+            transform: translateY(-50%) rotateZ(0deg) scale(1);
+  }
+}
+
+html body .road .taxi::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 2px;
+  width: 5px;
+  height: 15px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 42px #fc3c25;
+          box-shadow: 0px 42px #fc3c25;
+  background-color: #fc3c25;
+}
+
+html body .road .taxi::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 2px;
+  width: 5px;
+  height: 15px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 42px white;
+          box-shadow: 0px 42px white;
+  background-color: white;
+}
+
+html body .road .taxi .doubleLight {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  width: 100px;
+  height: 80px;
+  pointer-events: none;
+}
+
+html body .road .taxi .doubleLight::after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  right: -150%;
+  width: 150px;
+  height: 12px;
+  background: -webkit-gradient(linear, left top, right top, from(#fff6), to(transparent));
+  background: linear-gradient(90deg, #fff6, transparent);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: perspective(200px) rotateY(-50deg) rotateZ(-2deg);
+          transform: perspective(200px) rotateY(-50deg) rotateZ(-2deg);
+  z-index: 11;
+}
+
+html body .road .taxi .doubleLight::before {
+  content: '';
+  position: absolute;
+  bottom: 13px;
+  right: -150%;
+  width: 150px;
+  height: 12px;
+  background: -webkit-gradient(linear, left top, right top, from(#fff6), to(transparent));
+  background: linear-gradient(90deg, #fff6, transparent);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: perspective(200px) rotateY(-50deg) rotateZ(2deg);
+          transform: perspective(200px) rotateY(-50deg) rotateZ(2deg);
+  z-index: 11;
+}
+
+html body .road .taxi span {
+  position: absolute;
+  inset: 5px 10px;
+  border-radius: 10px;
+  background-color: #fdd206;
+  pointer-events: none;
+}
+
+html body .road .taxi span .sunroof {
+  position: absolute;
+  inset: 0px 30px;
+  border-radius: 10px;
+  background-color: #111;
+  overflow: hidden;
+}
+
+html body .road .taxi span .sunroof .realroof {
+  position: absolute;
+  inset: 6px 25px;
+  border-radius: 4px;
+  background-color: #fdd206;
+}
+
+html body .road .taxi span .sunroof .realroof::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 2px);
+  top: -200%;
+  width: 4px;
+  height: 500%;
+  background-color: #fdd206;
+}
+
+html body .road .taxi span .sunroof .realroof i {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+html body .road .taxi span .sunroof .realroof i:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  right: -14px;
+  top: -58px;
+  width: 6px;
+  height: 200%;
+  background-color: #fdd206;
+  -webkit-transform: rotate(75deg);
+          transform: rotate(75deg);
+}
+
+html body .road .taxi span .sunroof .realroof i:nth-child(1)::before {
+  content: '';
+  position: absolute;
+  right: -14px;
+  bottom: -58px;
+  width: 6px;
+  height: 200%;
+  background-color: #fdd206;
+  -webkit-transform: rotate(-75deg);
+          transform: rotate(-75deg);
+}
+
+html body .road .taxi span .sunroof .realroof i:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  left: -14px;
+  top: -58px;
+  width: 6px;
+  height: 200%;
+  background-color: #fdd206;
+  -webkit-transform: rotate(105deg);
+          transform: rotate(105deg);
+}
+
+html body .road .taxi span .sunroof .realroof i:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  left: -14px;
+  bottom: -58px;
+  width: 6px;
+  height: 200%;
+  background-color: #fdd206;
+  -webkit-transform: rotate(-105deg);
+          transform: rotate(-105deg);
+}
+
+html body .road .taxi span .sunroof .realroof div {
+  position: absolute;
+  left: 14%;
+  top: 28%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: 1.6px;
+  background-color: white;
+  z-index: 10;
+  padding: 2px 5px 5px 4px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  -webkit-transform: rotate(90deg) scale(0.9);
+          transform: rotate(90deg) scale(0.9);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+/*# sourceMappingURL=style.css.map */
