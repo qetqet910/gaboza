@@ -94,6 +94,8 @@ html {
                     background-color: black;
                     left: 50%;
                     top: 50%;
+
+                    animation: closebtn 3s infinite ease-in-out;
                 }
 
                 &::after {

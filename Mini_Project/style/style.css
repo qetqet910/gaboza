@@ -140,6 +140,8 @@ html body .LeftWindow .close::after, html body .LeftWindow .close::before {
   background-color: black;
   left: 50%;
   top: 50%;
+  -webkit-animation: closebtn 3s infinite ease-in-out;
+          animation: closebtn 3s infinite ease-in-out;
 }
 
 html body .LeftWindow .close::after {
