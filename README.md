@@ -32,6 +32,6 @@
 
 <br><br>
 
-###### 임시 포폴
+###### 임시 포FOR
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c2cea8e1-8539-47d8-b970-913a4ab2998f/deploy-status)](https://sleepy-brown-d6374f.netlify.app/)
