@@ -38,6 +38,7 @@ html body .fff {
   color: white;
   -webkit-transition: all .5s;
   transition: all .5s;
+  z-index: -10;
 }
 
 html body .LeftWindow {
@@ -66,6 +67,8 @@ html body .LeftWindow iframe {
   border-radius: 20px;
   -webkit-box-shadow: 5px 8px 10px rgba(50, 50, 50, 0.39);
           box-shadow: 5px 8px 10px rgba(50, 50, 50, 0.39);
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 html body .LeftWindow iframe::-webkit-scrollbar {

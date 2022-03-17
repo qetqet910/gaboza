@@ -6,14 +6,16 @@ const closeBtn = document.querySelector(".close");
 const fff = document.querySelector('.fff');
 
 let Counts = 0;
+let IFCount = 0;
 
 Lis.forEach(element => {
     element.addEventListener('click', (e) => {
-        if (Counts == 0) {
+        if (Counts == 0 && IFCount == 0) {
             CardOn(e)
             const IFrame = document.createElement('iframe');
             IFrame.src = window.getComputedStyle(e.currentTarget).content.replace("\"", "").replace("\"", "");
             LeftWindow.append(IFrame)
+            IFCount = 1;
         }
     }, false)
 });
@@ -23,7 +25,11 @@ closeBtn.addEventListener('click', (e) => {
     LeftWindow.style.backgroundColor = "rgba(255, 255, 255, 0)";
     closeBtn.style.opacity = '0';
     const IFrame = document.querySelector(".LeftWindow iframe");
-    IFrame.remove();
+    IFrame.style.opacity = 0;
+    setTimeout(() => {
+        IFrame.remove();
+    }, 500);
+    IFCount = 0;
 })
 
 function CardOn(e) {

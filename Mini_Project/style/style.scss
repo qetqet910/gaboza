@@ -27,6 +27,7 @@ html {
             font-size: 1.6rem;
             color: white;
             transition: all .5s;
+            z-index: -10;
         }
 
         .LeftWindow {
@@ -46,6 +47,7 @@ html {
                 height: 94%;
                 border-radius: 20px;
                 box-shadow: 5px 8px 10px rgba(50, 50, 50, 0.39);
+                transition: all .5s;
 
                 &::-webkit-scrollbar {
                     display: none;
