@@ -1,0 +1,142 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background-color: #121212;
+
+        .shadow {
+            position: absolute;
+            width: 300px;
+            height: 60px;
+            bottom: 26%;
+            background-color: rgba(0, 0, 0, .75);
+            border-radius: 50%;
+            animation: shadow 3s infinite ease-in-out;
+            z-index: 0;
+
+            @keyframes shadow {
+                0% {
+                    transform: translate(0px);
+                }
+
+                33.3% {
+                    transform: translate(-26px);
+                }
+
+                66.6% {
+                    transform: translate(26px);
+                }
+
+                99.9% {
+                    transform: translate(0px);
+                }
+            }
+        }
+
+        .bowl {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(255, 255, 255, .1);
+            border-radius: 50%;
+            box-shadow: 0px 0px 40px #111;
+            z-index: 999;
+            transform-origin: bottom;
+            animation: bowl 3s infinite ease-in-out;
+
+            @keyframes bowl {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                33.3% {
+                    transform: rotate(-20deg);
+                }
+
+                66.6% {
+                    transform: rotate(20deg);
+                }
+
+                99.9% {
+                    transform: rotate(0deg);
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: -3%;
+                width: 40%;
+                height: 30px;
+                border: 15px #444 solid;
+                border-radius: 50%;
+                box-shadow: 0px 7.5px 10px #222;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 40%;
+                transform: translate(-50%, -50%);
+                width: 150px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, .05);
+                z-index: 100;
+            }
+
+            .liquid {
+                position: absolute;
+                inset: 4% 4%;
+                border-radius: 50%;
+                border-bottom: 140px #e74c3c solid;
+                animation: liquid 3s infinite ease-in-out;
+                filter: drop-shadow(0px 0px 60px #e74c3c);
+
+                @keyframes liquid {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+
+                    33.3% {
+                        transform: rotate(24deg);
+                    }
+
+                    66.6% {
+                        transform: rotate(-24deg);
+                    }
+
+                    99.9% {
+                        transform: rotate(0deg);
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 93%;
+                    width: 100%;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: #b43b2e;
+                }
+
+            }
+        }
+    }
+}
