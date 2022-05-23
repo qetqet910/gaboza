@@ -1,0 +1,86 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #333;
+}
+
+body ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body ul li {
+  margin: 24px 0px;
+}
+
+body ul li a {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'BIZ UDPGothic', sans-serif;
+}
+
+body ul .arrow {
+  position: absolute;
+  width: 82px;
+  height: 32px;
+  left: 726px;
+  top: 116px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  z-index: -10;
+}
+
+body ul .arrow::after {
+  content: '>';
+  position: absolute;
+  left: -3rem;
+  top: 0px;
+  color: #5776ff;
+  font-size: 3rem;
+  font-weight: bold;
+  -webkit-transform: translateY(-34%);
+          transform: translateY(-34%);
+}
+
+body ul .arrow::before {
+  content: '>';
+  position: absolute;
+  right: -3rem;
+  top: 0px;
+  color: #5776ff;
+  font-size: 3rem;
+  font-weight: bold;
+  -webkit-transform: rotate(180deg) translateY(17%);
+          transform: rotate(180deg) translateY(17%);
+}
+/*# sourceMappingURL=style.css.map */

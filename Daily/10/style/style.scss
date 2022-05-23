@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background-color: #111;
+        .box{
+            position: relative;
+            width: 400px;
+            height: 400px;
+            .circle{
+                position: absolute;
+                left: calc(50% - 200px);
+                top: calc(50% - 200px);
+                width: 400px;
+                height: 400px;
+                background-color: rgba(60, 60, 60, 0.4);
+                box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.2), -2px -2px 3px rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(20px);
+                border-radius: 50%;
+                z-index: 10;
+            }
+            .green{
+                position: absolute;
+                left: -106%;
+                top: 80%;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background-color: rgb(1, 255, 1);
+                box-shadow: 0px 0px 20px rgb(1, 255, 1);
+                z-index: -10;
+                animation: GreenC 3.8s infinite ease-in-out;
+            }
+            .white{
+                position: absolute;
+                left: 150%;
+                top: -42%;
+                width: 170px;
+                height: 170px;
+                background-color: white;
+                box-shadow: 0px 0px 20px white; 
+                z-index: 30;
+                animation: WhiteC 3.81s infinite ease-in-out;
+            }
+            @keyframes GreenC {
+                0%{
+                    left: -106%;
+                    top: 80%;
+                }
+                50%{
+                    left: 106%;
+                    top: -38%;
+                }
+                100%{
+                    left: -106%;
+                    top: 80%;
+                    z-index: 10;
+                }
+            }
+
+            @keyframes WhiteC {
+                0%{
+                    left: 150%;
+                    top: -42%;
+                    transform: rotate(0deg);
+                }
+                50%{
+                    left: -106%;
+                    top: 80%;
+                    transform: rotate(180deg);
+                }
+                100%{
+                    left: 150%;
+                    top: -42%;
+                    z-index: -10;
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}

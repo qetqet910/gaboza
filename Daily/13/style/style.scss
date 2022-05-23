@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        li{
+            margin: 24px 0px;
+            a{
+                color: white;
+                font-size: 2rem;
+                font-weight: bold;
+                font-family: 'BIZ UDPGothic', sans-serif;
+            }
+        }
+        .arrow{
+            position: absolute;
+            width: 82px;
+            height: 32px;
+            left: 726px;
+            top: 116px;   
+            transition: all .3s;    
+            z-index: -10;
+            &::after{
+                content: '>';
+                position: absolute;
+                left: -3rem;
+                top: 0px;
+                color: rgb(87, 118, 255);
+                font-size: 3rem;
+                font-weight: bold;
+                transform: translateY(-34%);
+            }   
+            &::before{
+                content: '>';
+                position: absolute;
+                right: -3rem;
+                top: 0px;
+                color: rgb(87, 118, 255);
+                font-size: 3rem;
+                font-weight: bold;
+                transform: rotate(180deg) translateY(+17%);
+            }   
+        }
+    }
+}
