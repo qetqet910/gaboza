@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <form class="inputs">
+        <div class="TopSide">
+            <input type="text" autocomplete="off" name="TopSide" autofocus>
+            <span>First Name</span>
+        </div>
+        <div class="TopFull">
+            <input type="text" autocomplete="off" name="TopFull">
+            <span>Last Name</span>
+        </div>
+    </form>
+</body>
+<script>
+    const TopSide = document.querySelector(".TopSide input");
+    const TopFull = document.querySelector(".TopFull input");
+
+    const SideSpan = document.querySelector(".TopSide span");
+    const FullSpan = document.querySelector(".TopFull span");
+
+    TopSide.addEventListener('input', (e) => {
+        console.log(e.target.value.length);
+        if (e.target.value.length != 0) {
+            SideSpan.classList.toggle('SideActive');
+            TopSide.style.border = '1.8px solid #00FFAB';
+        } else {
+            TopSide.style.border = '1.8px solid rgba(153, 153, 153, 0.5)';
+            SideSpan.classList.remove('SideActive');
+        }
+    })
+
+    TopFull.addEventListener('change', (e) => {
+        if (e.target.value.length != 0) {
+            FullSpan.classList.toggle('FullActive');
+            TopFull.style.border = '1.8px solid #00FFAB';
+        } else {
+            TopFull.style.border = '1.8px solid rgba(153, 153, 153, 0.5)';
+            FullSpan.classList.remove('FullActive');
+        }
+    })
+
+
+</script>
+
+</html>

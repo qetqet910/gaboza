@@ -1,0 +1,221 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f6fa;
+}
+
+body .Hire {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .Hire .HireCard {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  height: 360px;
+  background-color: #487eb0;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 6px #487eb0;
+          box-shadow: 0px 0px 6px #487eb0;
+}
+
+body .Hire .HireCard .font {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .Hire .HireCard .font h6 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  word-spacing: 2px;
+}
+
+body .Hire .HireCard .font h5 {
+  font-weight: 500;
+  word-spacing: 2px;
+}
+
+body .Hire .HireCard .img {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border: 4px solid white;
+  -webkit-box-shadow: -4px 4px 6px rgba(51, 51, 51, 0.302);
+          box-shadow: -4px 4px 6px rgba(51, 51, 51, 0.302);
+  overflow: hidden;
+}
+
+body .Hire .HireCard .img img {
+  width: 130%;
+  height: 100%;
+}
+
+body .Hire .HireCard a {
+  position: relative;
+  padding: 8px 26px;
+  background-color: #fff;
+  color: #192a56;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: .8rem;
+  text-transform: uppercase;
+  margin-top: 20px;
+  -webkit-box-shadow: -4px 4px 6px rgba(51, 51, 51, 0.302);
+          box-shadow: -4px 4px 6px rgba(51, 51, 51, 0.302);
+}
+
+body .Hire input {
+  display: none;
+}
+
+body .Hire label {
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  background-color: #487eb0;
+  padding: 10px 22px 6px 18px;
+  -webkit-transform: translate(-50%, 98%);
+          transform: translate(-50%, 98%);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  font-size: 1rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-box-shadow: 0px -20px 30px #487eb0;
+          box-shadow: 0px -20px 30px #487eb0;
+  cursor: pointer;
+}
+
+body .Hire label::before {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 0px;
+  width: 40px;
+  height: 40px;
+  border-top-right-radius: 40px;
+  -webkit-box-shadow: 11px -11px 0 10px #487eb0;
+          box-shadow: 11px -11px 0 10px #487eb0;
+  z-index: -1;
+}
+
+body .Hire label::after {
+  content: '';
+  position: absolute;
+  right: -36px;
+  top: 0px;
+  width: 40px;
+  height: 40px;
+  border-top-left-radius: 40px;
+  -webkit-box-shadow: -11px -11px 0 10px #487eb0;
+          box-shadow: -11px -11px 0 10px #487eb0;
+  z-index: -1;
+}
+
+body .Hire label span {
+  display: block;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: 999;
+  font-size: 1.4rem;
+}
+
+body .Hire input:checked ~ .HireCard {
+  height: 70px;
+  padding: 10px 0px;
+}
+
+body .Hire input:checked ~ .HireCard .font {
+  margin-bottom: 20px;
+}
+
+body .Hire input:checked ~ label {
+  padding: 10px 16px 4px 18px;
+}
+
+body .Hire input:checked ~ label span {
+  -webkit-transform: rotate(450deg);
+          transform: rotate(450deg);
+  font-size: 1.8rem;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #06283D;
+    .inputs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        div{
+            position: relative;
+            width: 320px;
+            height: 60px;
+            border-radius: 10px;
+            margin: 16px;
+            input{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                border: none;
+                outline: none;
+                background: transparent;
+                border-radius: 10px;
+                font-size: 1.8rem;
+                border: 1.8px solid rgba(153, 153, 153, 0.288);
+                padding-left: 3%;
+                font-family: 'Gowun Dodum', sans-serif;
+                color: white;
+                transition: all .5s;
+                &:is(:actice, :focus){
+                    border: 1.8px solid #00FFAB;
+                }
+            }
+            span{
+                position: absolute;
+                display: block;
+                left: 3%;
+                padding: 2px 6px;
+                top: 50%;
+                font-size: 1.8rem;
+                transform: translateY(-50%);
+                color: rgba(153, 153, 153, 0.5);
+                text-transform: uppercase;
+                font-family: 'Fira Sans', sans-serif;
+                font-weight: bold;
+                transition: all .5s;
+                pointer-events: none;
+                user-select: none;
+                border: none;
+            }
+        }
+        .TopSide{
+            input:is(:actice, :focus) ~ span{
+                background: #06283D;
+                border-left: 1.8px solid #00FFAB;
+                border-right: 1.8px solid #00FFAB;
+                transition: border .5s background .2s;
+                top: 0%;
+            }
+        }
+        .TopFull{
+            input:is(:actice, :focus) ~ span{
+                background: #06283D;
+                transition: border .5s background .2s;
+                top: 0%;
+                padding: 2px 6px;
+                border-radius: 4px;
+                font-size: 1.4rem;
+                transform: translateY(-50%);
+                color: #06283D;
+                background-color: #00FFAB;
+                letter-spacing: 1.6px;
+            }
+        }
+        .SideActive{
+            background: #06283D;
+            border-left: 1.8px solid #00FFAB;
+            border-right: 1.8px solid #00FFAB;
+            transition: border .5s background .2s;
+            top: 0%;
+        }
+        .FullActive{
+            background: #06283D;
+            transition: border .5s background .2s;
+            top: 0%;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 1.4rem;
+            transform: translateY(-50%);
+            color: #06283D;
+            background-color: #00FFAB;
+            letter-spacing: 1.6px;
+        }
+    }
+}
