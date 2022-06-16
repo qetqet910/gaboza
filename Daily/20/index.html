@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Del Btn</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.2/lottie.min.js"
+        integrity="sha512-R47oG09eydaf225nXyDdSWJ8frKwxkC7QIHXdPpbUx9KaAiC6akjpWxTBw1hb7whk7P2sJNuRhS2ljSBegnIPA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <input type="checkbox" id="DelBTN">
+    <div class="Lottie"></div>
+    <label for="DelBTN" class="DelBTN">
+        <div class="Icon">
+            <span class="top"></span>
+            <span class="bottom">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>
+        <span class="Text">
+            Delete
+        </span>
+    </label>
+</body>
+<script>
+    const LottieEventer = document.querySelector(".Lottie");
+    const DelBTN = document.querySelector(".DelBTN");
+    const DelCheck = document.querySelector("#DelBTN");
+
+    let animationSkipForward = bodymovin.loadAnimation({
+        container: LottieEventer,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: "https://assets7.lottiefiles.com/datafiles/TtpruaCfUbd0Nk2/data.json"
+    });
+
+    DelBTN.addEventListener('click', (e) => {
+        if(DelCheck.checked != true){
+            animationSkipForward.playSegments([0, 60], true);
+        }
+    })
+
+</script>
+</html>

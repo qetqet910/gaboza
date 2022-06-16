@@ -1,0 +1,211 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(#b2bec3), to(#dfe6e9));
+  background: linear-gradient(to top, #b2bec3, #dfe6e9);
+}
+
+body input {
+  display: none;
+}
+
+body label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 160px;
+  height: 60px;
+  -webkit-box-shadow: inset 1px 1px 3px #fff, 8px 8px 10px #353b48;
+          box-shadow: inset 1px 1px 3px #fff, 8px 8px 10px #353b48;
+  background-color: #353b48;
+  border-radius: 10px;
+  border-left: 1px solid #f5f6fad6;
+  border-top: 1px solid #f5f6fad6;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+body label .Icon {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: 2;
+}
+
+body label .Icon span {
+  position: relative;
+  display: block;
+  background-color: #f5f6fa;
+}
+
+body label .Icon .top {
+  width: 22px;
+  height: 4px;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+body label .Icon .top::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  width: 6px;
+  height: 6px;
+  display: block;
+  background-color: #f5f6fa;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-top-left-radius: 1.4px;
+  border-top-right-radius: 1.4px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+body label .Icon .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 22px;
+  height: 24px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-top: 2px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+body label .Icon .bottom span {
+  width: 2.2px;
+  height: 80%;
+  background-color: #353b48;
+  margin: 0px 1.8px;
+  border-radius: 1.2px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+body label .Text {
+  color: #f5f6fa;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin-left: 10px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+body label:hover .Icon {
+  -webkit-transform: scale(2) translateY(8px) rotate(50deg);
+          transform: scale(2) translateY(8px) rotate(50deg);
+}
+
+body label:hover .Icon .top {
+  -webkit-transform: rotate(-75deg);
+          transform: rotate(-75deg);
+}
+
+body label:hover .Text {
+  -webkit-transform: translateX(-50px) translateY(4px) scale(0.5);
+          transform: translateX(-50px) translateY(4px) scale(0.5);
+  font-size: 0.1rem;
+}
+
+body input:checked ~ label {
+  background-color: #00a8ff;
+  -webkit-box-shadow: inset 1px 1px 3px #fff, 0px 0px 10px #fff;
+          box-shadow: inset 1px 1px 3px #fff, 0px 0px 10px #fff;
+  height: 160px !important;
+}
+
+body input:checked ~ label .Icon {
+  -webkit-transform: scale(2) translateY(-47px) rotate(240deg) translateX(-50px);
+          transform: scale(2) translateY(-47px) rotate(240deg) translateX(-50px);
+}
+
+body input:checked ~ label .Icon .top {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  width: 14px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+body input:checked ~ label .Icon .top::after {
+  opacity: 0;
+}
+
+body input:checked ~ label .Icon .bottom {
+  width: 4px;
+  height: 24px;
+  border-bottom-right-radius: 0px;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+body input:checked ~ label .Icon .bottom span {
+  opacity: 0;
+}
+
+body input:checked ~ label .Text {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 0;
+  font-size: 2.2rem;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+
+body input:checked:hover ~ label .Text {
+  -webkit-transform: none;
+          transform: none;
+  opacity: 0;
+  font-size: 2.2rem;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+
+body .Lottie {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=style.css.map */
