@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #161732;
+    .circle{
+        position: relative;
+        width: 400px;
+        height: 400px;
+        border: 4px solid #3B3B98;
+        border-radius: 50%;
+        overflow: hidden;
+        div{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            border-radius: 41%;
+            transform-origin: left top;
+            background-color: var(--color);
+        }
+        .wave2{
+            top: 16%;
+            animation: Wave 2.5s infinite linear;
+        }
+        .wave3{
+            top: 6%;
+            animation: Wave 5s infinite linear;
+        }
+        .wave4{
+            top: -4%;
+            animation: Wave 7.5s infinite linear;
+            border: 8px solid #3b3b77;
+            background: linear-gradient(#161638, #2c2c74) ;
+        }
+        @keyframes Wave {
+            0%{
+                transform: rotate(0deg) translate(-50%, -50%);                    
+            }
+            100%{
+                transform: rotate(360deg) translate(-50%, -50%);
+            }
+        }
+    }
+    .moon{
+        #moonin{
+            position: absolute;
+            left: 52%;
+            top: 30%;
+            font-size: 10rem;
+            color: white;
+            transform: translate(-50%, -50%);
+            transform-origin: top left;
+            animation: moon 5s infinite ease-in-out;
+            text-shadow: 0px 0px 20px #fff;
+            @keyframes moon {
+                0%{
+                    transform: rotate(-22deg) translate(-50%, -50%);
+                }
+                50%{
+                    transform: rotate(-10deg) translate(-50%, -50%);
+                }
+                100%{
+                    transform: rotate(-22deg) translate(-50%, -50%);
+                }
+            }
+        }
+    }
+    .stars{
+        i{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            color: white;
+            transform: scale(0);
+            transition: all .5s;
+            animation: stars 1s infinite ease-in-out;
+            animation-delay: var(--delay);
+            &:nth-child(1){left: 32%; top: 26%;}
+            &:nth-child(2){left: 65%; top: 40%;}
+            &:nth-child(3){left: 20%; top: 36%;}
+            &:nth-child(4){left: 40%; top: 45%;}
+            &:nth-child(5){left: 76%; top: 26%;}
+            @keyframes stars {
+                0%{
+                    transform: scale(0);
+                }
+                50%{
+                    transform: scale(1);
+                }
+                100%{
+                    transform: scale(0);
+                }
+            }
+        }
+    }
+}
