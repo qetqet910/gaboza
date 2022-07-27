@@ -1,0 +1,53 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #666;   
+    ul{
+        position: relative;
+        perspective: 300vw;
+        li{
+            position: absolute;
+            display: inline-flex;
+            width: max-content;
+            left: 50%;
+            top: 50%;
+            text-align: center;
+            font-size: 10vw;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: var(--color);
+            text-transform: uppercase;
+            font-family: 'Rubik', sans-serif;
+            -webkit-text-stroke: 2px #333;
+            transform: translate(-50% , -50%) rotateX(calc((var(--deg) - 1) * 10deg)) translateZ(100px);
+            opacity: .8;
+            inset: 0;
+            animation: li 6s infinite ease-in-out;
+        }
+        @keyframes li {
+            0%{
+                transform: translate(-50% , -50%) rotateX(calc((var(--deg) - 1) * 00deg)) translateZ(100px);
+            }
+            50%
+            ,75%{
+                transform: translate(-50% , -50%) rotateX(calc((var(--deg) - 1) * 10deg)) translateZ(100px) scale(1.2);
+            }
+            100%{
+                transform: translate(-50% , -50%) rotateX(calc((var(--deg) - 1) * 00deg)) translateZ(100px);
+            }
+        }
+    }
+}
